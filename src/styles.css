@@ -1,0 +1,77 @@
+.appContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: solid black 1px;
+    gap: 1em;
+    width: 15em;
+    height: 200px;
+    padding: 2em;
+    margin-top: 40px;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    justify-content: space-around;
+}
+
+.usernameInput{
+    height: 30px;
+}
+ 
+.chirpInput{
+     height: 30px;
+}
+
+.chirpBtn{
+    background-color: rgb(69, 106, 241);
+    color: white;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.chirpList{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-left: 2em;
+    margin-top: 25px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    gap: 5px;
+}
+
+.chirp{
+    height: 100px;
+    width: 350px;
+    border:  solid lightgray 1px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.chirpName{
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.chirpText{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    margin: 0px; 
+}
+
+.chirpTimeStamp{
+    color: darkgray;
+    font-size: small;
+    padding-left: 10px;
+}

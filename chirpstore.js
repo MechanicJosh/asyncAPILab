@@ -6,7 +6,7 @@ let chirps = { nextid: 0 };
 //this evaluates to see if 0.25 > Math.random()
 //that gives us ~ 1 in 4 chance that an error should happen
 const requestShouldBreak = () => {
-    return 1/4 > Math.random();
+    return 1 / 100 > Math.random();
 };
 
 if(fs.existsSync('chirps.json')) {

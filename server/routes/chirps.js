@@ -6,7 +6,16 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try{
         const chirps = await chirpStore.GetChirps();
-        res.json(chirps);
+
+        delete chirps.nextid;
+
+        const chirpsWithIDs = Object.keys(chirps).map((id) => {
+            const chirp = chirps[id];
+            chirp.id = id;
+            return chirp;
+        });
+
+        res.json(chirpsWithIDs);
     }catch(error){
         console.log(error);
         res.status(500).json({message: error});
@@ -29,7 +38,11 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try{
-        const newChirp = req.body;
+        const {name, text} = req.body;
+
+        const newChirp = { name, text, timestamp: new Date().toLocaleString() };
+
+
         await chirpStore.CreateChirp(newChirp);
         res.send('chirp created');
     }catch(error){
@@ -41,7 +54,9 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) =>{
     try{
         const chirpId = parseInt(req.params.id, 10);
-        const updateChirp = req.body;
+        const { name, text } = req.body;
+
+        const updateChirp = { name, text };
         await chirpStore.UpdateChirp(chirpId, updateChirp);
         res.send('Chirp Updated');
     }catch(error){

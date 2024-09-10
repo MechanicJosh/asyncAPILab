@@ -1,3 +1,22 @@
 {
-  "nextid": 2
+  "2": {
+    "name": "Mark",
+    "text": "Duane wasnt going to use it!",
+    "id": "2"
+  },
+  "3": {
+    "name": "Mark",
+    "text": "Duane wasnt going to use it!",
+    "id": "3"
+  },
+  "12": {
+    "name": "asdf",
+    "text": "sadfafsd",
+    "id": "12"
+  },
+  "13": {
+    "name": "testName",
+    "text": "testChirp"
+  },
+  "nextid": 14
 }
